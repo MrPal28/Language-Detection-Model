@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detected Language</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container result">
+        <h3>Detected Language:</h3>
+        <h1>{{ language }}</h1>
+        <p class="accuracy">Accuracy: {{ accuracy | round(2) }}%</p> <!-- Accuracy display -->
+        <a href="/" class="back-link">Try Another Text</a>
+    </div>
+</body>
+</html>
