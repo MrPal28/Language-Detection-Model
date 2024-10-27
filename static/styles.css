@@ -13,6 +13,7 @@ body {
   justify-content: center;
   height: 100vh;
   overflow: hidden;
+  flex-direction: column; /* Stack the containers vertically */
 }
 
 /* Glassmorphic Container */
@@ -26,10 +27,16 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(20px);
   text-align: center;
+  margin-bottom: 10px; /* Minimal gap between containers */
+}
+
+/* Ensure both containers are of equal size */
+.container.result {
+  height: 300px; /* Set a fixed height to both containers */
 }
 
 /* Text and Headings */
-h2, h3 {
+h3 {
   color: #333;
   margin-bottom: 20px;
 }
@@ -43,11 +50,26 @@ h1 {
   font-size: 1.2em;
   color: #333;
   margin-top: 10px;
-  background: rgba(255, 255, 255, 0.2); /* Glassmorphic effect */
+  background: rgba(255, 255, 255, 0.2);
   padding: 10px;
   border-radius: 8px;
   backdrop-filter: blur(10px);
   display: inline-block;
+}
+
+/* Translated Text Styling */
+.container.result p {
+  max-width: 500px;
+  width: 100%;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(20px);
+  text-align: center;
+  font-size: 1.1em;
+  color: #555;
 }
 
 /* Input Field Styling */
@@ -61,7 +83,7 @@ h1 {
   color: #333;
 }
 
-/* Neon Button */
+/* Neon Button Styles (unchanged) */
 .btn {
   background-color: #007bff;
   color: #fff;

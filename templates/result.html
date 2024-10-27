@@ -8,10 +8,15 @@
 </head>
 <body>
     <div class="container result">
-        <h3>Detected Language:</h3>
+        <h3>Detected Language</h3>
         <h1>{{ language }}</h1>
-        <p class="accuracy">Accuracy: {{ accuracy | round(2) }}%</p> <!-- Accuracy display -->
+        <p class="accuracy">Accuracy: {{ accuracy | round(2) }}%</p>
         <a href="/" class="back-link">Try Another Text</a>
+    </div>
+    <div class="container result">
+        <h3>Translated Text</h3>
+        <h1>{{ dest | capitalize }}</h1>
+        <p>{{ translated_text }}</p>
     </div>
 </body>
 </html>

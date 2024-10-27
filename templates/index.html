@@ -14,7 +14,19 @@
                 <label for="text">Enter Text:</label>
                 <input type="text" class="form-control" id="text" name="text" required>
             </div>
-            <button type="submit" class="btn">Detect Language</button>
+            
+            <!-- Dropdown Box with Language Codes as Values -->
+            <div class="form-group">
+                <label for="language_option">Choose an Option:</label>
+                <select id="language_option" name="language_option" class="form-control" required>
+                    <option value="detect">Detect Language</option>
+                    {% for lang in languages %}
+                    <option value="{{ lang.lower() }}">{{ lang }}</option>
+                {% endfor %}
+                </select>
+            </div>
+            
+            <button type="submit" class="btn">Submit</button>
         </form>
     </div>
 </body>
